@@ -14,7 +14,7 @@ export const createApiMiddleware = () => {
                 data = '',
                 endpoint
             }
-        } = action;npm
+        } = action;
         const URL = action.payload.endpoint;
 
 

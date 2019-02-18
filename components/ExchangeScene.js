@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {connect} from "react-redux";
-import {requestExchangeRate} from '../services/actions';
+import {requestExchangeRate, saveRates} from '../services/actions';
 import '../scss/exchange.scss';
 
 class ExchangeScene extends React.Component {
@@ -11,7 +11,8 @@ class ExchangeScene extends React.Component {
     }
 
     componentDidMount() {
-        this.props.dispatch(requestExchangeRate('USD'));
+        this.props.dispatch(requestExchangeRate('USD')).then(data =>
+            this.props.dispatch(saveRates(data)));
         //setTimeout(this.props.dispatch(requestExchangeRate('USD')), 10000);
     }
 
