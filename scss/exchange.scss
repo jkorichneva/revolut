@@ -1,5 +1,27 @@
 .exchange__scene {
-    background: red;
-    width: 200px;
-    height: 100px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.exchange__back {
+    position:absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index:10;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.exchange__withdraw {
+    position:absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index:10;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
 }

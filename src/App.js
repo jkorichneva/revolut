@@ -16,8 +16,8 @@ class RevolutApp extends React.Component {
             <div className='revolut__root'>
                 <Router>
                     <Switch>
-                        <Route exact path='/' component={PocketScene}/>
-                        <Route path='/exchange' component={ExchangeScene} />
+                        <Route exact path='/' component={ExchangeScene}/>
+                        <Route path='/exchange' component={PocketScene} />
                     </Switch>
                 </Router>
             </div>

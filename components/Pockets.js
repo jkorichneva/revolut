@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import Pocket from './Pocket';
 import Button from './Button';
 import '../scss/pocket_scene.scss';
+import ExchangeInputBody from "./ExchangeInput";
 
 class Pockets extends React.Component {
     constructor(props) {
@@ -13,15 +14,14 @@ class Pockets extends React.Component {
     }
 
     render() {
-        const pockets = this.props.pockets;
         return (
             <div className='pockets'>
                 <div className='pockets__carousel'>
-                {Object.keys(pockets).map(function(key, index) {
-                    return <Pocket pocket={pockets[key]} key={index} currency={key}/>
-                })}
+                    {this.props.pockets.map(function(key, index) {
+                        return <Pocket pocket={key.sum} key={index} currency={key.currency}/>
+                    })}
                 </div>
-                <Link to="/exchange">Exchange</Link>
+                <Link to="/exchange" className='pockets__exchange__btn'>Exchange</Link>
             </div>
         )
     }

@@ -1,0 +1,44 @@
+.exchange__input {
+    width: 100%;
+    height: 50%;
+    background: rgba(32,124,229,1);
+    position: relative;
+    &.converting {
+        background: rgba(72,172,234,1);
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+    }
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 50px 20px;
+        color: white;
+    }
+}
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    .dot {
+        width: 8px;
+        height: 8px;
+        margin-right: 5px;
+        background:white;
+        outline: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.4;
+        &.active {
+            opacity: 1;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

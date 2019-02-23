@@ -22,11 +22,11 @@ export const createApiMiddleware = () => {
 
         if (method === 'get') {
             newPayload  = axios[method](
-                `${URL}${endpoint}${endpoint.indexOf('?') !== -1 ? '&' : '?'}${data}`
+                `${endpoint}${endpoint.indexOf('?') !== -1 ? '&' : '?'}${data}`
             );
         } else {
             newPayload = axios[method](
-                `${URL}${endpoint}${endpoint.indexOf('?') !== -1 ? '&' : '?'}`,
+                `${endpoint}${endpoint.indexOf('?') !== -1 ? '&' : '?'}`,
                 data
             );
         }
