@@ -6,12 +6,12 @@
     margin-right: 30px;
     border-radius: 50%;
     border: 1px solid transparent;
-    width: 150px;
     height: 150px;
     padding: 37px 15px 37px;
     box-sizing: border-box;
     vertical-align:top;
     transition: all 0.5s;
+    min-width: 150px;
     &:last-of-type {
         margin-right: 0;
     }

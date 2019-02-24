@@ -55,6 +55,9 @@ export default (state = initialState, action) => {
                 return {...state, resultSum: resultSum, initialSum: sum};
             }
         case WITHDRAW_FUNDS:
+            if (!state.initialSum) {
+                return {...state}
+            }
             let initialPocketIndex = state.currencies[state.currentCurrency].pocketIndex;
             let resultPocketIndex = state.currencies[state.resultCurrency].pocketIndex;
             let initialPocket = state.pockets[initialPocketIndex];
