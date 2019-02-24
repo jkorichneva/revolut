@@ -20,18 +20,27 @@ export const requestExchangeRate = (base) =>  ({
 export const saveRates = (data, currency) => ({
     type: SAVE_RATES,
     payload: {data, currency}
-})
+});
 
 export const changeCurrency = (index, resultCurrency) => ({
     type: CHANGE_CURRENCY,
     payload: {index, resultCurrency}
-})
+});
 
 export const exchangeMoney = (value, resultCurrency) => ({
     type: EXCHANGE_MONEY,
     payload: {value, resultCurrency}
-})
+});
 
 export const withdrawFunds = () => ({
     type: WITHDRAW_FUNDS
-})
+});
+
+export const checkRecalculate = (resultCurrency) => (dispatch, getState) => {
+    const state = getState();
+    if (resultCurrency) {
+        dispatch(exchangeMoney(state.revolut.resultSum, true));
+    } else {
+        dispatch(exchangeMoney(state.revolut.initialSum, false))
+    }
+};

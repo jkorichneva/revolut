@@ -49,10 +49,10 @@ export const apiResponseMiddleware = () => {
                     action.payload.data = data.intervals;
                     return next({...action});
                 }
-                actionName = action.type.replace('FULFILLED', 'REJECTED')
+                actionName = action.type.replace('FULFILLED', 'REJECTED');
                 return next({...action, type: actionName});
             } catch(e) {
-                actionName = action.type.replace('FULFILLED', 'REJECTED')
+                actionName = action.type.replace('FULFILLED', 'REJECTED');
                 return next({...action, type: actionName});
             }
         }

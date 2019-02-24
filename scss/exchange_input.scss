@@ -1,16 +1,19 @@
 .exchange__input {
     width: 100%;
     height: 50%;
-    background: rgba(32,124,229,1);
+    background: linear-gradient(180deg, #7ee0f5 0%, #809eec 100%);
     position: relative;
     &.converting {
-        background: rgba(72,172,234,1);
+        background: linear-gradient(180deg, #809eec 0%, #7ee0f5 100%);
     }
     .swiper-container {
         width: 100%;
         height: 100%;
         white-space: nowrap;
-    }
+        max-width: 810px;
+        margin: 0 auto;
+        overflow: hidden;
+}
     .swiper-slide {
         width: 100%;
         height: 100%;
@@ -18,12 +21,33 @@
         box-sizing: border-box;
         padding: 50px 20px;
         color: white;
+        position: relative;
+        input {
+            font-size: 2.5em;
+            background: transparent;
+            outline: none;
+            border: none;
+            color: white;
+            max-width: 150px;
+            text-align: right;
+        }
+        .pocket__currency {
+            font-size: 2.5em;
+        }
+        .pocket__right {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            text-align:right;
+        }
     }
 }
 .swiper-pagination {
     position: absolute;
     bottom: 10px;
     width: 100%;
+    max-width: 810px;
+    margin: 0 auto;
     text-align: center;
     .dot {
         width: 8px;

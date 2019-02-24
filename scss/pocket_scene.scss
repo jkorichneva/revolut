@@ -2,21 +2,20 @@
     width: 100%;
     height: 100%;
     position: fixed;
+    * {
+        font-family: "Helvetica Neue Cyr", "Arial", "Nimbus Sans L", "sans-serif";
+    }
 }
 .pockets {
     padding: 150px 15px 40px;
     background: rgba(72,172,234,1);
-    background: -moz-linear-gradient(45deg, rgba(72,172,234,1) 0%, rgba(31,143,229,1) 48%, rgba(32,124,229,1) 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(72,172,234,1)), color-stop(48%, rgba(31,143,229,1)), color-stop(100%, rgba(32,124,229,1)));
-    background: -webkit-linear-gradient(45deg, rgba(72,172,234,1) 0%, rgba(31,143,229,1) 48%, rgba(32,124,229,1) 100%);
-    background: -o-linear-gradient(45deg, rgba(72,172,234,1) 0%, rgba(31,143,229,1) 48%, rgba(32,124,229,1) 100%);
-    background: -ms-linear-gradient(45deg, rgba(72,172,234,1) 0%, rgba(31,143,229,1) 48%, rgba(32,124,229,1) 100%);
-    background: linear-gradient(45deg, rgba(72,172,234,1) 0%, rgba(31,143,229,1) 48%, rgba(32,124,229,1) 100%);
+    background: linear-gradient(180deg, #809eec 0%, #7ee0f5 100%)
 }
 .pockets__carousel {
     white-space: nowrap;
     overflow-x: auto;
     padding-bottom:10px;
+    text-align:center;
 }
 .pockets__exchange__btn {
     color: white;
@@ -26,9 +25,52 @@
     border-radius: 4px;
     margin: 30px auto 0;
     text-align:center;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     display: block;
+    max-width: 300px;
+}
+.pocket__transactions__empty {
+    color: #484848;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align:center;
+}
+.pocket__transaction {
+    font-size: 13px;
+    color: #707070;
+    padding: 15px 20px 15px 70px;
+    position: relative;
+    border: 1px solid #eeeeee;
+    border-top: none;
+    .c_svg_refresh {
+        padding: 10px;
+        background: #809eec;
+        border-radius: 50%;
+        width: 40px;
+        top: 14px;
+        left: 13px;
+        position: absolute;
+        height: 40px;
+        box-sizing: border-box;
+        svg {
+            width: 20px;
+            path {
+                fill: #484848;
+            }
+        }
+    }
+    .transaction__line {
+        padding: 3px 0;
+        b {
+            float: right;
+        }
+    }
+}
+.pocket__transactions {
+    height: calc(100% - 420px);
+    max-width: 810px;
+    margin: 0 auto;
 }
 body {
     margin:0;
