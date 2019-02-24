@@ -68,8 +68,8 @@ export default (state = initialState, action) => {
             let newTransaction = {
                 currencyFrom: initialPocket.currency,
                 currencyTo: resultPocket.currency,
-                withdraw: `- ${state.initialSum}`,
-                add: `+ ${state.resultSum}`
+                withdraw: `- ${Number.parseFloat(state.initialSum).toFixed(2)}`,
+                add: `+ ${Number.parseFloat(state.resultSum).toFixed(2)}`
             };
             transactions.push(newTransaction);
 

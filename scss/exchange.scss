@@ -6,6 +6,11 @@
         font-family: "Helvetica Neue Cyr", "Arial", "Nimbus Sans L", "sans-serif";
     }
 }
+.exchange__scene__wrap {
+    max-width: 810px;
+    margin: 0 auto;
+    position: relative;
+}
 .exchange__back {
     position:absolute;
     top: 0;

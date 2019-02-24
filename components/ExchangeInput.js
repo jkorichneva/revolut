@@ -7,7 +7,8 @@ import classNames from 'classnames';
 import '../scss/exchange_input.scss';
 import {init as initSwiper} from '../services/Swiper';
 import ExchangeInputBody from './ExchangeInputBody';
-import {changeCurrency, checkRecalculate} from "../services/actions";
+import {Link} from "react-router-dom";
+import {changeCurrency, checkRecalculate, withdrawFunds} from "../services/actions";
 
 class ExchangeInput extends React.Component {
     constructor(props) {
@@ -25,11 +26,13 @@ class ExchangeInput extends React.Component {
                 'exchange__input': true,
                 'converting': !this.props.resultCurrency,
             })}>
-                <div className={classNames({
+                 <div className={classNames({
                     'swiper-container': true,
                     [`swiper${this.props.swiper}`]: true,
                 })}>
-                    <div className='swiper-wrapper'>
+                     {!this.props.resultCurrency &&  <Link to="/" className='exchange__back'>Cancel</Link>}
+                     {!this.props.resultCurrency && <Link to='/' className='exchange__withdraw' onClick={this.props.onExchangeClick}>Exchange</Link>}
+                     <div className='swiper-wrapper'>
                         {this.props.pockets.map((data, index) => {
                             return <ExchangeInputBody key={index}
                                                       autoFocus={index === 0 && !isResultCurrency}
@@ -63,5 +66,8 @@ export default connect(
             dispatch(changeCurrency(index, !!ownProps.resultCurrency));
             dispatch(checkRecalculate(!!ownProps.resultCurrency));
         },
+        onExchangeClick: () => {
+            dispatch(withdrawFunds());
+        }
     }),
 )(ExchangeInput)
