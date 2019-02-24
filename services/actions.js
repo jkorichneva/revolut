@@ -39,8 +39,8 @@ export const withdrawFunds = () => ({
 export const checkRecalculate = (resultCurrency) => (dispatch, getState) => {
     const state = getState();
     if (resultCurrency) {
-        dispatch(exchangeMoney(state.revolut.resultSum, true));
-    } else {
         dispatch(exchangeMoney(state.revolut.initialSum, false))
+    } else {
+        dispatch(exchangeMoney(state.revolut.resultSum, true));
     }
 };
