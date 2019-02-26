@@ -6,6 +6,7 @@ import React from "react";
 let newSwiper = {
     slideNext: () => newSwiper.slideNext(),
     slidePrev: () => newSwiper.slidePrev(),
+    slideTo: () => newSwiper.slideTo(),
 };
 
 export const init = options => {
@@ -22,8 +23,8 @@ export const init = options => {
             bulletActiveClass: 'active',
             bulletClass: 'dot',
         },
-        noSwipingClass: 'no_swiper',
-        noSwipingElement: 'textarea',
+        noSwipingClass: 'pocket__right, pocket__currency',
+        noSwipingElement: 'input',
     });
 }
 

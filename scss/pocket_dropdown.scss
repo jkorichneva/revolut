@@ -1,0 +1,20 @@
+.pocket__dropdown {
+    border: 1px solid white;
+    z-index: 20;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    background: linear-gradient(180deg, #809eec 0%, #7ee0f5 100%);
+    h3 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 22px;
+    }
+    div {
+        cursor: pointer;
+        font-size: 24px;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

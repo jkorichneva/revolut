@@ -8,9 +8,9 @@ import {
 
 const initialState = {
     pockets: [
-        {currency: 'USD', sum: 0.00},
-        {currency: 'GBP', sum: 0.00},
-        {currency: 'EUR', sum: 0.00},
+        {currency: 'USD', sum: 200},
+        {currency: 'GBP', sum: 100},
+        {currency: 'EUR', sum: 80},
     ],
     currentCurrency: 'USD',
     resultCurrency: 'USD',

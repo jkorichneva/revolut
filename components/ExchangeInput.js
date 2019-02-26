@@ -37,6 +37,9 @@ class ExchangeInput extends React.Component {
                             return <ExchangeInputBody key={index}
                                                       autoFocus={index === 0 && !isResultCurrency}
                                                       index={index}
+                                                      swiperClass={`swiper${this.props.swiper}`}
+                                                      slideTo={this.props.slideTo}
+                                                      currencyIndex={index}
                                                       resultCurrency={isResultCurrency}/>
                         })}
                     </div>
@@ -68,6 +71,6 @@ export default connect(
         },
         onExchangeClick: () => {
             dispatch(withdrawFunds());
-        }
+        },
     }),
 )(ExchangeInput)

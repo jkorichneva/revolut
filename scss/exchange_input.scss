@@ -32,6 +32,16 @@
         }
         .pocket__currency {
             font-size: 2.5em;
+            cursor: pointer;
+            .c_svg {
+                width: 20px;
+                display: inline-block;
+                margin-left: 10px;
+                svg {
+                    width: 100%;
+                    height: 28px;
+                }
+            }
         }
         .pocket__right {
             position: absolute;
