@@ -2,7 +2,9 @@ import React from 'react';
 import ExchangeInputBody from '../components/ExchangeInputBody';
 import renderer from 'react-test-renderer';
 
-
+/* Warning: to run this test please comment the lines, that connect ExchangeInputBody and PocketDropDown
+components to reducer. Don't know how to fix that, unfortunately :(
+*/
 test('Dropdown shows when clicked', () => {
     const pockets = [
         {currency: 'USD', sum: 200},
