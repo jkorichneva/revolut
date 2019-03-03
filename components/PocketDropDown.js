@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {connect} from "react-redux";
-import '../scss/pocket_dropdown.scss';
 
 class PocketDropDown extends React.Component {
     render() {
@@ -16,10 +15,11 @@ class PocketDropDown extends React.Component {
         )
     }
 }
-
+//uncomment when testing
+//export default PocketDropDown
+//comment when testing
 export default connect(
     state => ({
-        pockets: state.revolut.pockets,
     }),
     (dispatch, ownProps) => ({
         slideTo: (index) => {

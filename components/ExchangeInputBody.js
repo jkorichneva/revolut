@@ -3,7 +3,6 @@
 import React from 'react';
 import {connect} from "react-redux";
 import propTypes from 'prop-types';
-import '../scss/exchange_input.scss';
 import PocketDropDown from './PocketDropDown';
 import SvgIcon from './SvgIcon';
 import {exchangeMoney} from '../services/actions';
@@ -42,7 +41,7 @@ class ExchangeInputBody extends React.Component {
                 <div className='pocket__currency__wrap'>
                     <div className='pocket__currency' onClick={this.showDropDown}>{this.props.pockets[this.props.index].currency}
                     <SvgIcon type={this.state.showDropDown ? 'arrowUp' : 'arrowDown'} /></div>
-                    {this.state.showDropDown && <PocketDropDown swiperClass={this.props.swiperClass}/>}
+                    {this.state.showDropDown && <PocketDropDown swiperClass={this.props.swiperClass} pockets={this.props.pockets}/>}
                 </div>
                 <div className='pocket__sum'>You
                     have {this.props.currencies[this.props.pockets[this.props.index].currency].symbol} {formatToFixed(this.props.pockets[this.props.index].sum)}</div>
@@ -69,7 +68,9 @@ ExchangeInputBody.propTypes = {
     currentCurrency: propTypes.string,
     pockets: propTypes.array
 };
-
+//uncomment when testing
+//export default ExchangeInputBody;
+//comment when testing
 export default connect(
     state => ({
         currencies: state.revolut.currencies,

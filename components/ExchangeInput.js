@@ -5,6 +5,8 @@ import {connect} from "react-redux";
 import propTypes from 'prop-types';
 import classNames from 'classnames';
 import '../scss/exchange_input.scss';
+import '../scss/pocket_dropdown.scss';
+import '../scss/exchange_input.scss';
 import {init as initSwiper} from '../services/Swiper';
 import ExchangeInputBody from './ExchangeInputBody';
 import {Link} from "react-router-dom";
